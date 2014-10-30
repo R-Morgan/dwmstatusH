@@ -7,3 +7,4 @@ TODO:
    need to be accessible as modules from dwmstatusH Main.hs
 3) Add feature to main to push what is the current output string to WM_NAME
    in the root X11 window
+4) Add UTC zone support
