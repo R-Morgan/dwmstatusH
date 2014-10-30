@@ -1,0 +1,9 @@
+{-Yay!, it's my handy dandy TODO list for dwmstatusH -}
+
+TODO:
+
+1) Add Licence information
+2) Fix the xlib functions. Currently, they are both main functions, but they
+   need to be accessible as modules from dwmstatusH Main.hs
+3) Add feature to main to push what is the current output string to WM_NAME
+   in the root X11 window
