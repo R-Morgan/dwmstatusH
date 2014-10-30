@@ -1,4 +1,6 @@
 import DwmStatusH.SysFunctions
 
-main = snatchLoadAvg 
+main = do snatchLoadAvg 
+          snatchTime
+
           
