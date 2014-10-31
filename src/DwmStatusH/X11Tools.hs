@@ -21,13 +21,13 @@ main = do
  exitWith ExitSuccess
 -}
 
---setWMName :: String -> IO ()
+setWMName :: String -> IO ()
 setWMName contents = do 
   dpy <- openDisplay ""
   let dflt = defaultScreen dpy
   rootw <- rootWindow dpy dflt
   setTextProperty dpy rootw contents wM_NAME
   sync dpy False 
-  threadDelay(10 * 1000000)
+  closeDisplay dpy
+  threadDelay(1 * 1000000)
   return ()
-  exitWith ExitSuccess
