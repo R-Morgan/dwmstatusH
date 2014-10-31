@@ -10,7 +10,3 @@ makeWMString = do ldavg <- snatchLoadAvg
                   let outStr = "LdAvg: " ++ ldavg ++ " | Vancouver: " ++ localSysTime
                   setWMName outStr
                   return ()
- 
---          putStrLn $  "LdAvg: " ++ ldavg ++ " | Vancouver: " ++ localSysTime
-
-          
