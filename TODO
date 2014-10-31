@@ -2,9 +2,12 @@
 
 TODO:
 
-1) Add Licence information
-2) Fix the xlib functions. Currently, they are both main functions, but they
+1) Fix the xlib functions. Currently, they are both main functions, but they
    need to be accessible as modules from dwmstatusH Main.hs
-3) Add feature to main to push what is the current output string to WM_NAME
-   in the root X11 window
-4) Add UTC zone support
+
+2) Fix UTC string, to not include UTC and the year on the end, since that info
+   is clear in the first date-time string.
+
+3) Add multiple time zone abilities. 
+
+4) Add a Makefile for easy compilation
