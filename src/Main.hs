@@ -1,7 +1,16 @@
 import DwmStatusH.SysFunctions
+import DwmStatusH.X11Tools
+import Control.Monad
 
-main = do ldavg <- snatchLoadAvg 
-          localSysTime <- snatchTime
-          putStrLn $  "LdAvg: " ++ ldavg ++ " | Vancouver: " ++ localSysTime
+main = forever $ makeWMString
+
+
+makeWMString = do ldavg <- snatchLoadAvg 
+                  localSysTime <- snatchTime
+                  let outStr = "LdAvg: " ++ ldavg ++ " | Vancouver: " ++ localSysTime
+                  setWMName outStr
+                  return ()
+ 
+--          putStrLn $  "LdAvg: " ++ ldavg ++ " | Vancouver: " ++ localSysTime
 
           
