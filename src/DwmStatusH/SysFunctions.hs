@@ -19,7 +19,6 @@ snatchTime = do ct <- getClockTime
 makeUTCTime :: IO String
 makeUTCTime = do ct <- getClockTime
                  let utcTime = (calendarTimeToString . toUTCTime) ct
-
                  return utcTime
 
 snatchLoadAvg :: IO String
