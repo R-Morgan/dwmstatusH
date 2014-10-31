@@ -1,6 +1,7 @@
 module DwmStatusH.SysFunctions
 (
 snatchTime,
+makeUTCTime,
 snatchLoadAvg
 ) where 
 
@@ -14,6 +15,12 @@ snatchTime :: IO String
 snatchTime = do ct <- getClockTime
                 let timeStr = show ct
                 return timeStr 
+
+makeUTCTime :: IO String
+makeUTCTime = do ct <- getClockTime
+                 let utcTime = (calendarTimeToString . toUTCTime) ct
+
+                 return utcTime
 
 snatchLoadAvg :: IO String
 snatchLoadAvg = do ldavg <- getLoadAvg
