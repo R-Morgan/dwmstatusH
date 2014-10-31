@@ -4,7 +4,6 @@ setWMName
 ) where 
 import Graphics.X11.Xlib
 --import Graphics.X11.Xlib.Extras (getTextProperty, wcTextPropertyToTextList)
-import System.Exit (exitWith, ExitCode(..))
 import Control.Concurrent (threadDelay)
 
 {-main :: IO ()
